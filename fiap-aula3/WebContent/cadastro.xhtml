@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+   <head>
+     <title>Cardápio</title>
+   </head>
+
+   <body>
+     <h2>
+
+       <h:form>
+       <h:panelGrid>
+         <h:outputLabel value="Nome:" for="txtNome" />
+         <h:inputText id="txtNome" value="#{cardapioMBean.nome}" required="true" requiredMessage="Nome Obrigatório" />
+
+         <h:outputLabel value="Valor:" for="txtValor"/>
+         <h:inputText id="txtValor" value="#{cardapioMBean.valor}" required="true" requiredMessage="Valor Obrigatório" />
+          
+         <h:outputLabel value="Tipo:"  for="txtTipo" />
+         <h:inputText id="txtTipo" value="#{cardapioMBean.tipo}" required="true"  requiredMessage="Tipo Obrigatório" />
+         
+         <h:commandButton action="#{cardapioMBean.salvar}" />
+         
+         <h:messages/>
+        
+         </h:panelGrid>
+       </h:form>
+     
+     
+     </h2>
+   
+   </body>
+
+</html>
